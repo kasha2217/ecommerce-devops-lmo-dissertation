@@ -1,5 +1,18 @@
 **Note:** This project is a fork of `opentelemetry-demo`. Thanks to the team and contributors for opensourcing this wonderful demo project. Definitely one of the best on internet.
 
+This project is based on the repository:
+https://github.com/iam-veeramalla/ultimate-devops-project-demo
+
+The original repository was used as a baseline DevOps implementation.
+This dissertation significantly extends the original work by implementing:
+
+- Kubernetes-based orchestration
+- Infrastructure as Code using Terraform
+- Centralized logging using OpenSearch
+- Monitoring using Prometheus & Grafana
+- Distributed tracing using OpenTelemetry & Jaeger
+- Cross-signal observability (Logs, Metrics, Traces)
+
 <!-- markdownlint-disable-next-line -->
 # <img src="https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png" alt="OTel logo" width="45"> OpenTelemetry Demo
 
