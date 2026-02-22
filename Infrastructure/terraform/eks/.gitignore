@@ -1,0 +1,11 @@
+# This file tells git which files/folders to ignore
+# Add patterns below
+*.tfstate
+*.tfstate.*
+.terraform/
+*.log
+*.bak
+*.backup
+*.swp
+.DS_Store
+backend/
