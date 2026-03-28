@@ -54,3 +54,9 @@ test/tracetesting/tracetesting-vars.yaml
 *.apk
 
 !src/currency/build
+*.swp
+terraform.tfstate
+terraform.tfstate.backup
+*.swp
+terraform.tfstate
+terraform.tfstate.backup
