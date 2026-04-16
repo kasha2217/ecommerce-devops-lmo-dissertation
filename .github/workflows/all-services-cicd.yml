@@ -1,4 +1,4 @@
-iname: All Services CI/CD
+name: All Services CI/CD
 
 on:
   push:
