@@ -1,3 +1,18 @@
+# Kanika Sharma - 2024TM93011
+# End to End DevOps Implementation - LMO Stack
+
+x-default-logging: &logging
+  driver: "json-file"
+  options:
+    max-size: "5m"
+    max-file: "2"
+    tag: "{{.Name}}"
+
+networks:
+  default:
+    name: opentelemetry-demo
+    driver: bridge
+
 services:
 
   # Jaeger - Distributed Tracing
@@ -16,8 +31,8 @@ services:
           memory: 400M
     restart: unless-stopped
     ports:
-      - "16686:16686"   # Jaeger UI
-      - "4317:4317"     # OTLP gRPC
+      - "16686:16686"
+      - "4317:4317"
     environment:
       - METRICS_STORAGE_TYPE=prometheus
     logging: *logging
@@ -112,7 +127,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./src/otel-collector/otelcol-config.yml:/etc/otelcol-config.yml
     ports:
-      - "4318:4318"   # OTLP HTTP
+      - "4318:4318"
     depends_on:
       jaeger:
         condition: service_started
